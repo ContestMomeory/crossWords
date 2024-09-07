@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>填字游戏</title>
+        <script src = "library/p5.js"></script>
+        <script src = "library/addons/p5.sound.js"></script>
+        <script src = "crossWordsV2.js"></script>
+        <style>
+            body{
+                font-size: 19px;
+            }
+            button{
+                font-size: 19px;
+            }
+            textarea
+            {
+                font-size: 18px;
+            }
+            input
+            {
+                font-size: 20px;
+            }
+            #gridContainer
+            {
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+            #leftColumn
+            {
+                grid-column: 1;
+            }
+
+            #rightColumn
+            {
+                grid-column: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "gridContainer">
+            <div id = "leftColumn">
+                <h1 id = "header">填字游戏</h1>
+                <input id = "topicInput" type = "text" placeholder = "输入主题，可不填"></input>
+                <p>
+                    <textarea id = "wordInput" rows = "18" cols = "20" placeholder = "输入单词"></textarea>
+                </p>
+                <p><button id = "wordsSubmmit">生成填字游戏</button></p>   
+                <ol id = "answerList"></ol>
+                <p>
+                    <button id = "getScore">提交打分</button>
+                </p>
+            </div>
+            <div id = "rightColumn">
+                <input id = "userAnswer" type = "text" placeholder = "输入答案">
+            </div>
+        </div>
+    </body>
+</html>
